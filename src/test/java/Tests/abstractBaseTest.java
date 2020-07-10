@@ -1,5 +1,6 @@
 package Tests;
 
+import Utilities.Driver;
 import Utilities.browserUtilities;
 import Utilities.configurationReader;
 import com.aventstack.extentreports.ExtentReports;
@@ -10,7 +11,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.io.IOException;
-import java.sql.Driver;
+
 
 public class abstractBaseTest {
     protected WebDriver driver;
@@ -21,7 +22,7 @@ public class abstractBaseTest {
     @BeforeTest
     public void beforeTest() {
         extentReports = new ExtentReports();
-        String reportPath = "";
+        String reportPath;
 
         if (System.getProperty("os.name").toLowerCase().contains("win")) {
             reportPath = System.getProperty("user.dir") + "\\test-output\\report.html";

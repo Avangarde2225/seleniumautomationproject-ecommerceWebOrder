@@ -6,12 +6,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class driver {
+public class Driver {
     private static ThreadLocal<WebDriver> driverPool = new ThreadLocal<>();
 
     //so no one can create object of Driver class
     //everyone should call static getter method instead
-    private driver() {
+    private Driver() {
 
     }
 
