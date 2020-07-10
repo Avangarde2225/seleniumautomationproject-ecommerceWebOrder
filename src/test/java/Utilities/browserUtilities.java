@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Set;
 
 public class browserUtilities {
-    /**
+    /*
      * Pause test for some time
      *
      * @param seconds
@@ -29,7 +29,7 @@ public class browserUtilities {
         }
     }
 
-    /**
+    /*
      * @param elements represents collection of WebElements
      * @return collection of strings
      */
@@ -43,7 +43,7 @@ public class browserUtilities {
         return textValues;
     }
 
-    /**
+    /*
      * waits for backgrounds processes on the browser to complete
      *
      * @param timeOutInSeconds
@@ -58,7 +58,7 @@ public class browserUtilities {
         }
     }
 
-    /**
+    /*
      * Clicks on an element using JavaScript
      *
      * @param element
@@ -68,7 +68,7 @@ public class browserUtilities {
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
     }
 
-    /**
+    /*
      * Scroll to element using JavaScript
      *
      * @param element
@@ -77,7 +77,7 @@ public class browserUtilities {
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
-    /**
+    /*
      * @param name screenshot name
      * @return path to the screenshot
      */
@@ -85,7 +85,7 @@ public class browserUtilities {
         //adding date and time to screenshot name, to make screenshot unique
         name = new Date().toString().replace(" ", "_").replace(":", "-") + "_" + name;
         //where we gonna store a screenshot
-        String path = "";
+        String path;
 
         if (System.getProperty("os.name").toLowerCase().contains("mac")) {
             path = System.getProperty("user.dir") + "/test-output/screenshots/" + name + ".png";
@@ -112,7 +112,7 @@ public class browserUtilities {
         return path;
     }
 
-    /**
+    /*
      * This method will switch webdriver from current window
      * to target window based on page title
      * @param title of the window to switch
